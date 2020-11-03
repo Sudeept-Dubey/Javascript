@@ -1,0 +1,13 @@
+<!-- page 1 Question 7 -->
+<!DOCTYPE html>
+<head>
+    <title>Page1_Question7</title>
+</head>
+<body>
+    <h1>Display Message on Page Reload</h1>
+    <a class="button" href="?reload/">reload and alert</a>
+        <script type="text/javascript">         
+            args = location.search.substr(1);
+            if (args=='reload/')alert('Have a GOOD Day!');  
+        </script>
+</body>

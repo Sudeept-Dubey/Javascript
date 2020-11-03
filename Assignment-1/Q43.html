@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature</title>
+</head>
+<body>
+    <form >
+        <label for="temp">Enter Temperature</label>
+        <input type="number" id="temp" value="temp">
+        <input type="button" value="Show Results" onclick="myFunction();//return false">
+    </form>
+
+    <div id="message"></div>
+    <script>
+        function myFunction(){
+            
+            var t = Number(document.getElementById("temp").value);
+            if( isNaN(t)){
+                document.getElementById("message").innerHTML = "please enter a number";
+            } else if( t == ""){
+                document.getElementById("message").innerHTML="Please enter an input";
+            } else {
+                var x = ((5 * (t-32))/9);
+                document.getElementById("message").innerHtml = "The result is "+x+"degree celsius";
+            }
+            // var x = (5/9) * (t-32);
+            //     document.getElementById("message").innerHtml = "The result is "+x+"degree celsius";
+        }
+
+    </script>
+</body>
+</html>
